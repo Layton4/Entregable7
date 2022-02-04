@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8579601760346558082}
   - component: {fileID: 3842141503403550124}
   - component: {fileID: 6635028203920141795}
+  - component: {fileID: 1151120615455406639}
   m_Layer: 0
   m_Name: Money
   m_TagString: Money
@@ -106,7 +107,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: af9f934eb4288464eb120a5857921cc3, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -192,3 +193,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1151120615455406639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579601760348528630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586861dd1cc05b84cbadcf9736b840e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
