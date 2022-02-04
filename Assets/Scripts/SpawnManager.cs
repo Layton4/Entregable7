@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] objectprefabs; 
 
     private Vector3 spawnPosition;
+    private int girar = 180;
 
     //Limites donde queremos que spawnee el prefab
     private float uplim = 14.1f;
@@ -48,7 +49,7 @@ public class SpawnManager : MonoBehaviour
             else
             {
                 spawnPosition.x = spawnPosition.x * -1;
-                Quaternion prefabrotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y + 180, transform.rotation.z);
+                Quaternion prefabrotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y + girar, transform.rotation.z);
                 Instantiate(objectprefabs[objecto], spawnPosition, prefabrotation); //instanciamos un prefab aleatorio de la lista de prefabs, en la spawnposition.
             }
 
