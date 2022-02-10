@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private float upLimit = 13.94f; //limite superior de la pantalla
     public bool gameOver = false; //el boolean que nos indicará si hemos perdido el juego
+    private float deathtime = 5;
 
     //particulas que utilizaremos durante la partida
     public ParticleSystem coinParticleSystem;
@@ -59,10 +60,10 @@ public class PlayerController : MonoBehaviour
         if(otherCollider.gameObject.CompareTag("ground")) //al detectar que toca el suelo
         {
             Debug.Log("GAME OVER!!");
-            gameOver = true; //perdemos el juego
-            //Time.timeScale = 0; //el juego se acaba 
+            gameOver = true; //perdemos el juego 
             CamAudio.Pause(); //se apaga la música también
             Debug.Log($"Score: {counter}");
+            Destroy(gameObject, deathtime);
         }
 
         if(otherCollider.gameObject.CompareTag("Bomb")) //al detectar que se choca con una bomba
