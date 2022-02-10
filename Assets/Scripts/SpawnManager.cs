@@ -9,6 +9,8 @@ public class SpawnManager : MonoBehaviour
 
     private Vector3 spawnPosition;
     private int girar = 180;
+    private int zero = 0;
+    private int two = 2;
 
     //Limites donde queremos que spawnee el prefab
     private float uplim = 14.1f;
@@ -39,10 +41,10 @@ public class SpawnManager : MonoBehaviour
     {
         if (!playerControllerScript.gameOver) //solo spawneará si no hemos perdido el juego
         {
-            int orientacion = Random.Range(0, 2); //la decisión de si va a aparecer por la izquieda (0) o la derecha (1).
-            int objecto = Random.Range(0, objectprefabs.Length); //con esta linea se obtiene que elemento del array vamos a spawnear de forma aleatoria
+            int orientacion = Random.Range(zero, two); //la decisión de si va a aparecer por la izquieda (0) o la derecha (1).
+            int objecto = Random.Range(zero, objectprefabs.Length); //con esta linea se obtiene que elemento del array vamos a spawnear de forma aleatoria
             spawnPosition = RandomSpawnPosition(); //obtenemos nuestra posición random
-            if (orientacion == 0)
+            if (orientacion == zero)
             {
                 Instantiate(objectprefabs[objecto], spawnPosition, objectprefabs[objecto].transform.rotation); //instanciamos un prefab aleatorio de la lista de prefabs, en la spawnposition.
             }
