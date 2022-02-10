@@ -82,8 +82,7 @@ public class PlayerController : MonoBehaviour
         if (otherCollider.gameObject.CompareTag("Money")) //al recolectar dinero
         {
 
-            ParticleSystem CoinPs = Instantiate(coinParticleSystem, transform.position, transform.rotation);
-            CoinPs.Play(); //aparecen particulas de explosion
+            coinParticleSystem.Play(); //aparecen particulas para mostrar que se ha cogido la moneda
             
             Debug.Log("+1 Coin"); //se indica que se ha recolectado 1 moneda
             counter++;
